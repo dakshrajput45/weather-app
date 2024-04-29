@@ -1,0 +1,240 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+:root {
+    --color--cornSilk : #fff8dc;
+    --color--slateGray : #2F4F4F;
+    --color--midnightblue : #191970;
+    --color--salmon : #FA8072;
+    --color--grdient : linear-gradient(90deg, rgba(11,4,118,1) 41%, rgba(34,34,80,1) 68%);
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color:azure;
+    background-image: var(--color--grdient);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.tab-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8x;
+}
+
+.tab.current-tab {
+    background-color: grey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab.current-tab:focus {
+    outline : 3px solid var(--color--salmon);
+}
+
+.weather-container {
+    margin-block: 3rem;
+}
+
+.btn {
+    all:unset;
+    font-size: 0.85rem;
+    color: var(--color--midnightblue);
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--color--cornSilk);
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grant-location-container {
+    display: none;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+
+.grant-location-container img{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing : 0.75px;
+}
+
+.loading-container {
+    display: none;
+}
+
+.loading-container.active {
+    display: flex;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+}
+
+.user-info-container {
+    display: none;
+}
+.user-info-container.active {
+    display: flex;
+}
+
+
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+}
+.name {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.name p{
+    font-size: 2rem;
+}
+.name img{
+    width:30px;
+    height:30px;
+    object-fit: contain;
+}
+
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.user-info-container p[data-temp] {
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+
+.parameter-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.parameter {
+    width: 30%;
+    align-items: center;
+    max-width: 200px;
+    background-color: var(--color--slateGray);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+}
+
+.parameter img{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type {
+    font-size: 1rem;
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.form-container {
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 2rem;
+}
+.form-container.active {
+    display: flex;
+}
+
+.form-container input{
+    all: unset;
+    color: var(--color--midnightblue);
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: beige;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-container input::placeholder{
+    color: var(--color--midnightblue);
+}
+
+.form-container input:focus{
+    outline : 3px solid var(--color--salmon);
+}
+
+.form-container .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 1px;
+}
+.form-container .btn:focus{
+    outline : 3px solid var(--color--salmon);
+}
